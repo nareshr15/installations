@@ -1,0 +1,11 @@
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+
+deb https://pkg.jenkins.io/debian-stable binary/
+
+sudo apt-get update
+
+sudo apt-get install jenkins
+
+open git bash in downloads (since it has ajent.jar, it should also have firstkeypair.pem)
+
+scp -i ./firstkeypair.pem agent.jar ubuntu@public ip of ec2 instance:/home/ubuntu
